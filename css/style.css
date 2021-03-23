@@ -1,0 +1,140 @@
+@import url('./base.css');
+/* navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--dark);
+  color: var(--light);
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+}
+.navbar a {
+  color: var(--light);
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+.navbar a:hover {
+  border-bottom: var(--primary) solid 2px;
+}
+
+.navbar ul {
+  display: flex;
+}
+.navbar h1 {
+  font-weight: 400;
+}
+.navbar h1 a:hover {
+  border: unset;
+}
+
+/* Header */
+.hero {
+  background: url('../images/home/showcase.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: var(--light);
+  position: relative;
+}
+.hero * {
+  z-index: 1;
+}
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 20px;
+}
+.hero .content h1 {
+  font-size: 55px;
+}
+.hero .content p {
+  font-size: 23px;
+  max-width: 600px;
+  margin: 20px 0 30px 0;
+}
+/* overlay */
+.hero::before {
+  content: '';
+  /* make sure the parent has position relative */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.578);
+}
+
+/* Icons */
+.icons {
+  padding: 30px;
+}
+
+.icons h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.icons span {
+  background: var(--primary);
+  color: var(--light);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.cases img:hover {
+  opacity: 0.7;
+}
+
+.team img {
+  border-radius: 50%;
+  clip-path: circle();
+}
+
+.callback-form {
+  width: 100%;
+  padding-bottom: 20px 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.callback-form .form-group {
+  margin-bottom: 15px;
+}
+.callback-form input {
+  width: 100%;
+  padding: 4px;
+  height: 40px;
+  border: var(--default) 1px solid;
+}
+.callback-form input:focus {
+  outline-color: var(--primary);
+}
+
+.footer {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--light);
+}
+.footer .social > * {
+  margin-right: 30px;
+}
+
+.footer a:hover {
+  color: var(--primary);
+}
